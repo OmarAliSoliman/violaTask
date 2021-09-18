@@ -127,3 +127,11 @@ if ($(".slideImg").length) {
     var parallaxInstance = new Parallax(es);
   })
 }
+
+const splash = 	document.querySelector(".splash");
+
+document.addEventListener("DOMContentLoaded",(e)=> {
+	setTimeout(()=> {
+		splash.classList.add("displayNone");
+	})
+});
