@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap");
 html {
   scroll-behavior: smooth;
@@ -31,7 +38,6 @@ button {
   text-decoration: none !important;
   outline: none;
   -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -55,7 +61,6 @@ button {
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -76,7 +81,14 @@ button {
   background: #a3294b;
   position: absolute;
   left: -34px;
-  animation: pinkbar 1.5s infinite ease;
+  -webkit-animation: pinkbar 1.5s infinite ease;
+          animation: pinkbar 1.5s infinite ease;
+}
+
+@-webkit-keyframes pinkbar {
+  50% {
+    left: 196px;
+  }
 }
 
 @keyframes pinkbar {
@@ -86,10 +98,19 @@ button {
 }
 .splash div {
   width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .splash.displayNone {
@@ -113,9 +134,12 @@ button {
   top: 0;
   left: -400px;
   background-color: #fff;
-  box-shadow: 0 22px 22px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 22px 22px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 22px 22px rgba(0, 0, 0, 0.05);
   overflow-x: hidden;
   padding-top: 30px;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
   text-align: center;
   padding-bottom: 10px;
@@ -128,6 +152,8 @@ button {
   text-decoration: none;
   font-size: 18px;
   color: #000;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 .sidenav a:hover {
@@ -143,6 +169,8 @@ button {
   display: inline-block;
   width: 40px;
   height: 40px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(left, #b22c52, #ca6248);
   background-image: linear-gradient(to right, #b22c52, #ca6248);
   color: #fff !important;
   line-height: 40px;
@@ -154,39 +182,66 @@ button {
   margin-top: 39px;
 }
 .sidenav .login a {
+  background-image: -webkit-gradient(linear, left top, right top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(left, #b22c52, #ca6248);
   background-image: linear-gradient(to right, #b22c52, #ca6248);
   color: #fff;
   width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center !important;
-  align-items: center !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
   text-align: center !important;
   padding: 10px;
   border-radius: 30px;
 }
 .sidenav .login a:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(right, #b22c52, #ca6248);
   background-image: linear-gradient(to left, #b22c52, #ca6248);
 }
 .sidenav .social {
   text-align: center;
   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   bottom: 10px;
   left: 50%;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 .sidenav .social a {
   width: 35px;
   height: 35px;
   border: 1px solid #999;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 5px;
 }
 .sidenav .social a i {
@@ -220,12 +275,23 @@ button {
   z-index: 99;
 }
 .mynavbar .mynavbar-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .mynavbar .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   margin-bottom: 0;
 }
@@ -238,6 +304,8 @@ button {
 }
 .mynavbar .login a {
   display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(left, #b22c52, #ca6248);
   background-image: linear-gradient(to right, #b22c52, #ca6248);
   color: #fff;
   width: 150px;
@@ -246,6 +314,8 @@ button {
   border-radius: 30px;
 }
 .mynavbar .login a:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(right, #b22c52, #ca6248);
   background-image: linear-gradient(to left, #b22c52, #ca6248);
 }
 .mynavbar .mobile-icon {
@@ -284,12 +354,23 @@ button {
 .header .swiper-slide .title {
   display: block;
   opacity: 0;
+  -webkit-transition: 0.5s ease 0.5s;
+  -o-transition: 0.5s ease 0.5s;
   transition: 0.5s ease 0.5s;
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
 }
 .header .swiper-slide-duplicate .description h5,
@@ -312,6 +393,8 @@ button {
 .header .swiper-slide .description a,
 .header .swiper-slide .title a {
   display: inline-block;
+  background-image: -webkit-gradient(linear, left top, right top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(left, #b22c52, #ca6248);
   background-image: linear-gradient(to right, #b22c52, #ca6248);
   color: #fff;
   width: 150px;
@@ -325,6 +408,8 @@ button {
 .header .swiper-slide-duplicate .title a:hover,
 .header .swiper-slide .description a:hover,
 .header .swiper-slide .title a:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(right, #b22c52, #ca6248);
   background-image: linear-gradient(to left, #b22c52, #ca6248);
 }
 .header .swiper-slide-duplicate-active .description,
@@ -335,13 +420,15 @@ button {
 }
 .header .swiper-slide-duplicate-active .title,
 .header .swiper-slide-active .title {
+  -webkit-transition: opacity 0.5s ease 0.5s;
+  -o-transition: opacity 0.5s ease 0.5s;
   transition: opacity 0.5s ease 0.5s;
 }
 .header .swiper-slide-duplicate::after,
 .header .swiper-slide::after {
   content: "";
   width: 100%;
-  background-image: url("../images/header-slider-after.png");
+  /* background-image: url("../images/header-slider-after.png"); */
   height: 100%;
   position: absolute;
   top: 0;
@@ -354,8 +441,12 @@ button {
 }
 .header .swiper-pagination {
   bottom: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 .header .swiper-pagination .swiper-pagination-bullet {
   border: 1px solid #757575;
@@ -367,6 +458,8 @@ button {
   margin-left: 5px;
 }
 .header .swiper-pagination .swiper-pagination-bullet-active {
+  background-image: -webkit-gradient(linear, right top, left top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(right, #b22c52, #ca6248);
   background-image: linear-gradient(to left, #b22c52, #ca6248);
   border: 1px solid linear-gradient(to left, #b22c52, #ca6248);
 }
@@ -393,6 +486,8 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+  background-image: -webkit-gradient(linear, right top, left top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(right, #b22c52, #ca6248);
   background-image: linear-gradient(to left, #b22c52, #ca6248);
   height: 100%;
   width: 0;
@@ -402,10 +497,16 @@ button {
   opacity: 1;
 }
 .header .swiper-progress-bar.animate .slide_progress-bar:after {
+  -webkit-transition: width linear;
+  -o-transition: width linear;
   transition: width linear;
-  transition-delay: unset;
+  -webkit-transition-delay: unset;
+       -o-transition-delay: unset;
+          transition-delay: unset;
   width: 100%;
-  transition-duration: 5s;
+  -webkit-transition-duration: 5s;
+       -o-transition-duration: 5s;
+          transition-duration: 5s;
 }
 
 /* why-choose */
@@ -439,18 +540,32 @@ button {
   margin-left: 0px;
 }
 .why-choose .all-cards .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   border: 0;
   margin-bottom: 15px;
 }
 .why-choose .all-cards .card .card-body {
   padding: 0;
   margin-left: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .why-choose .all-cards .card .card-body h5 {
   font-weight: bold;
@@ -467,15 +582,24 @@ button {
   width: 100px;
   height: 100px;
   border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .why-choose .all-cards .card:hover .card-img {
+  background-image: -webkit-gradient(linear, right top, left top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(right, #b22c52, #ca6248);
   background-image: linear-gradient(to left, #b22c52, #ca6248);
 }
 .why-choose .all-cards .card:hover .card-img img {
-  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 
 /* digital */
@@ -509,10 +633,14 @@ button {
   padding: 32px;
   border-radius: 15px;
   border: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .digital .all-cards-slider .card .card-img img {
   width: auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .digital .all-cards-slider .card .card-title {
@@ -520,20 +648,27 @@ button {
   font-size: 1.5em;
   margin: 0;
   margin-top: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .digital .all-cards-slider .card .card-text {
   font-size: 0.9em;
   margin: 0;
   margin-top: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .digital .all-cards-slider .card:hover {
   background-color: #b22c52;
-  transform: translateY(-5px);
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 .digital .all-cards-slider .card:hover .card-img img {
-  filter: brightness(0) invert(1);
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
 }
 .digital .all-cards-slider .card:hover .card-title {
   color: #fff;
@@ -542,9 +677,15 @@ button {
   color: #fff;
 }
 .digital .swiperBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 60px;
 }
 .digital .swiperBtn div {
@@ -612,7 +753,9 @@ button {
   margin-top: 10px;
 }
 .technology .techno-cards .card:hover {
-  transform: translateY(-10px);
+  -webkit-transform: translateY(-10px);
+      -ms-transform: translateY(-10px);
+          transform: translateY(-10px);
 }
 .technology .techno-cards .card:hover a {
   background-color: #a3294b;
@@ -674,10 +817,19 @@ button {
   height: 100vh;
   background-image: url("../images/pattern.png");
   background-color: #b22c52;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center;
 }
 .login-img h5 {
@@ -703,9 +855,15 @@ button {
 
 .login-content {
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .login-content h5 {
   color: #b22c52;
@@ -719,37 +877,60 @@ button {
   margin-top: 30px;
 }
 .login-content .btnSignin {
+  background-image: -webkit-gradient(linear, left top, right top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(left, #b22c52, #ca6248);
   background-image: linear-gradient(to right, #b22c52, #ca6248);
   color: #fff;
   border-radius: 0;
   width: 200px;
   padding: 10px;
   border: 2px solid linear-gradient(to right, #b22c52, #ca6248);
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .login-content .btnSignin:hover {
+  background-image: -webkit-gradient(linear, right top, left top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(right, #b22c52, #ca6248);
   background-image: linear-gradient(to left, #b22c52, #ca6248);
 }
 .login-content .social {
   text-align: center;
   margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   position: absolute;
   bottom: 10px;
   left: 50%;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 .login-content .social a {
   width: 35px;
   height: 35px;
   border: 1px solid #999;
   border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 5px;
 }
 .login-content .social a i {
@@ -760,12 +941,14 @@ button {
 .contact-us-page .map iframe {
   width: 100%;
   height: 505px;
-  filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 .contact-us-page .contact-form-img {
   margin-top: -150px;
   background-color: #fff;
-  box-shadow: 0 3px 32px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 3px 32px rgba(0, 0, 0, 0.16);
+          box-shadow: 0 3px 32px rgba(0, 0, 0, 0.16);
   padding: 62px 65px;
   position: relative;
   z-index: 9;
@@ -792,6 +975,8 @@ button {
   height: 111px !important;
 }
 .contact-us-page .contact-form-img .sheepPeersForm .btn-submit button {
+  background-image: -webkit-gradient(linear, left top, right top, from(#b22c52), to(#ca6248));
+  background-image: -o-linear-gradient(left, #b22c52, #ca6248);
   background-image: linear-gradient(to right, #b22c52, #ca6248);
   width: 169px;
   border: 0;
@@ -800,9 +985,15 @@ button {
   line-height: 44px;
   border-radius: 30px;
   color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .contact-us-page .contact-form-img .card-img {
   position: relative;
@@ -832,6 +1023,8 @@ button {
   left: 10px;
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 .formStyle .form-group .form-control {
@@ -839,7 +1032,25 @@ button {
   height: 51px;
   border: 0;
   border-radius: 0;
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
+}
+.formStyle .form-group .form-control::-webkit-input-placeholder {
+  font-size: 14px;
+  color: rgba(0, 37, 67, 0.29);
+}
+.formStyle .form-group .form-control::-moz-placeholder {
+  font-size: 14px;
+  color: rgba(0, 37, 67, 0.29);
+}
+.formStyle .form-group .form-control:-ms-input-placeholder {
+  font-size: 14px;
+  color: rgba(0, 37, 67, 0.29);
+}
+.formStyle .form-group .form-control::-ms-input-placeholder {
+  font-size: 14px;
+  color: rgba(0, 37, 67, 0.29);
 }
 .formStyle .form-group .form-control::placeholder {
   font-size: 14px;
@@ -849,13 +1060,16 @@ button {
   outline: none !important;
   border: 1px solid #647583;
   background-color: #fff;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .activeInput {
   opacity: 1 !important;
   visibility: visible !important;
-  transform: translate(2px);
+  -webkit-transform: translate(2px);
+      -ms-transform: translate(2px);
+          transform: translate(2px);
 }
 
 @media (max-width: 1024px) {
@@ -875,7 +1089,10 @@ button {
   }
 
   .our-features {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .login .login-img h5 {
@@ -895,7 +1112,9 @@ button {
 .header .swiper-slide-duplicate .title,
 .header .swiper-slide .description,
 .header .swiper-slide .title {
-    align-items: center !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
     text-align: center;
   }
 
@@ -936,15 +1155,24 @@ button {
 @media (max-width: 768px) {
   .navbar-parent {
     padding-top: 50px;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100px;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 
   .mynavbar .link-logo {
     width: 100%;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-bottom: 10px;
   }
 
@@ -1001,35 +1229,56 @@ button {
     position: absolute !important;
     bottom: 100%;
     left: 50%;
-    transform: translate(-50%, 0) !important;
+    -webkit-transform: translate(-50%, 0) !important;
+        -ms-transform: translate(-50%, 0) !important;
+            transform: translate(-50%, 0) !important;
     z-index: -1;
     opacity: 0.5;
   }
 
   .header .swiper-pagination {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .header .swiper-slide-duplicate,
 .header .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding-top: 0;
   }
 
   .why-choose .all-cards .card {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 30px;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
   }
   .why-choose .all-cards .card .card-body {
     margin-left: 0;
     text-align: center;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 5px;
   }
 
@@ -1051,7 +1300,10 @@ button {
 }
 @media (max-width: 376px) {
   .mynavbar .link-logo {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .mynavbar ul {
@@ -1089,9 +1341,6 @@ button {
 
 .sidenav .closebtn i, .why-choose .all-cards .card, .technology .techno-cards .card, .contact-us-page .contact-form-img .sheepPeersForm .btn-submit button {
   -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-
-/*# sourceMappingURL=style.css.map */
