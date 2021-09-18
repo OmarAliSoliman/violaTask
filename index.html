@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/bootstrap-en.min.css">
+  <link rel="stylesheet" href="./assets/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./assets/css/animate.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="bg-sidenavOpen"></div>
+
+  <div id="mySidenav" class="sidenav">
+    <div class="container">
+      <img class="logo" src="./assets/images/logo.png" alt="">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+        <i class="fas fa-times"></i>
+      </a>
+      <ul class="links list-unstyled wow animate__animated animate__bounceInDown">
+        <li><a href="./index.html">Home</a></li>
+        <!-- <li><a href="">Technology</a></li> -->
+        <li><a href="./contact-us.html">Contact Us</a></li>
+      </ul>
+      <div class="login wow animate__animated animate__bounceInDown">
+        <a href="./login.html">Sign in</a>
+      </div>
+    </div>
+    <div class="social">
+      <a href=""><i class="fab fa-facebook-f"></i></a>
+      <a href=""><i class="fab fa-twitter"></i></a>
+      <a href=""><i class="fab fa-linkedin-in"></i></a>
+      <a href=""><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+
+  <div class="mynavbar">
+    <div class="container">
+      <div class="mynavbar-parent">
+        <div class="logo wow animate__animated animate__bounceInDown">
+          <img src="./assets/images/logo.png" alt="">
+        </div>
+        <ul class="links list-unstyled wow animate__animated animate__bounceInDown">
+          <li><a href="./index.html">Home</a></li>
+          <!-- <li><a href="">Technology</a></li> -->
+          <li><a href="./contact-us.html">Contact Us</a></li>
+        </ul>
+        <div class="login wow animate__animated animate__bounceInDown">
+          <a href="./login.html">Sign in</a>
+        </div>
+      </div>
+      <div class="mobile-icon">
+        <a onclick="openNav()">
+          <i class="fas fa-bars"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header">
+    <div class="swiper-container headerSwiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-7">
+                <div class="title">
+                  <h5 class="wow animate__animated animate__heartBeat animate__delay-.5s">Litepeaks , Totally Digital
+                  </h5>
+                  <p class="wow animate__animated animate__jello animate__delay-1s">Lorem Ipsum is simply dummy text of
+                    the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s
+                  </p>
+                  <a href="" class="wow animate__animated animate__swing animate__delay-1.5s">See More</a>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-5">
+                <div class="slideImg wow animate__animated animate__fadeIn animate__delay-2s">
+                  <img data-depth="1" src="./assets/images/Untitled-1.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-7">
+                <div class="title">
+                  <h5>Litepeaks , Totally Digital</h5>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s
+                  </p>
+                  <a href="">See More</a>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-5">
+                <div class="slideImg">
+                  <img data-depth="1" src="./assets/images/Untitled-1.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-7">
+                <div class="title">
+                  <h5>Litepeaks , Totally Digital</h5>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s
+                  </p>
+                  <a href="">See More</a>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-12 col-lg-5">
+                <div class="slideImg">
+                  <img data-depth="1" src="./assets/images/Untitled-1.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="container">
+        <div class="swiper-pagination"></div>
+      </div>
+      <!-- Progressbar -->
+      <div class="swiper-progress-bar">
+        <span class="slide_progress-bar"></span>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- why choose -->
+  <div class="why-choose">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-5">
+          <div class="why-card wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
+            <h5>Why Choose
+              Litepeak
+            </h5>
+            <p>
+              Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+              Latin literature from 45 BC, making it over 2000 years old.
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-7">
+          <div class="all-cards">
+            <div class="card wow animate__animated animate__backInUp" data-wow-delay="0.4s">
+              <div class="card-img">
+                <img src="./assets/images/w3.png" alt="">
+              </div>
+              <div class="card-body">
+                <h5>Good Thinking</h5>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              </div>
+            </div>
+
+            <div class="card wow animate__animated animate__backInUp" data-wow-delay="0.6s">
+              <div class="card-img">
+                <img src="./assets/images/w2.png" alt="">
+              </div>
+              <div class="card-body">
+                <h5>Good Thinking</h5>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              </div>
+            </div>
+
+            <div class="card wow animate__animated animate__backInUp" data-wow-delay="0.8s">
+              <div class="card-img">
+                <img src="./assets/images/w1.png" alt="">
+              </div>
+              <div class="card-body">
+                <h5>Good Thinking</h5>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Digital -->
+  <div class="digital">
+    <div class="container">
+      <div class="section-header">
+        <h5>Digital Marketing</h5>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+      </div>
+      <div class="all-cards-slider">
+        <div class="mySwiper swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="card wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
+                <div class="card-img">
+                  <img src="./assets/images/f4.png" alt="">
+                </div>
+                <h5 class="card-title">Ui Ux Design</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
+                <div class="card-img">
+                  <img src="./assets/images/f3.png" alt="">
+                </div>
+                <h5 class="card-title">Ui Ux Design</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
+                <div class="card-img">
+                  <img src="./assets/images/f2.png" alt="">
+                </div>
+                <h5 class="card-title">Ui Ux Design</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card wow animate__animated animate__fadeIn" data-wow-delay="0.8s">
+                <div class="card-img">
+                  <img src="./assets/images/f1.png" alt="">
+                </div>
+                <h5 class="card-title">Ui Ux Design</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="card wow animate__animated animate__fadeIn" data-wow-delay="1s">
+                <div class="card-img">
+                  <img src="./assets/images/f1.png" alt="">
+                </div>
+                <h5 class="card-title">Ui Ux Design</h5>
+                <p class="card-text">Lorem Ipsum is simply dummy text of the printing and</p>
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiperBtn">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- technology -->
+  <div class="technology">
+    <div class="container">
+      <div class="section-header">
+        <h5>Technology</h5>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+      </div>
+      <div class="techno-cards">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
+              <div class="card-img" style="background-image: url('./assets/images/tec1.png');"></div>
+              <h5 class="card-title">App Development</h5>
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <a href="">Enroll Now</a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="0.8s">
+              <div class="card-img" style="background-image: url('./assets/images/tec2.png');"></div>
+              <h5 class="card-title">App Development</h5>
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <a href="">Enroll Now</a>
+
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card wow animate__animated animate__fadeInUp" data-wow-delay="1.2s">
+              <div class="card-img" style="background-image: url('./assets/images/tec3.png');"></div>
+              <h5 class="card-title">App Development</h5>
+              <p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+              <a href="">Enroll Now</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- support -->
+  <div class="support">
+    <div class="container">
+      <div class="div-img">
+        <img src="./assets/images/customerserv.png" alt="" class="supp-img">
+      </div>
+      <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-8">
+          <div class="supp-conten">
+            <h5 class="wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">You Need Support</h5>
+            <p class="wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">Lorem Ipsum is simply dummy text of
+              the printing and typesetting industry.</p>
+            <a class="wow animate__animated animate__fadeInUp" data-wow-delay="0.8s" href="">Call Us</a>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4" style="display: none;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/jquery-3.3.1.min.js"></script>
+  <script src="./assets/js/popper.min.js"></script>
+  <script src="./assets/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+  <script src="./assets/js/wow.js"></script>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
